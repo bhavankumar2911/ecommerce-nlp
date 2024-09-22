@@ -1,0 +1,17 @@
+.product-image {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+}
+
+li:hover {
+  background-color: #eee;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

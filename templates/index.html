@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Guidance using NLP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="bg-primary">
+      <p class="text-center bg-primary text-white py-4 font-medium fs-4">
+        Shopping Guidance Using NLP
+      </p>
+    </nav>
+    <div class="container w-50">
+      <!-- search form -->
+      <form class="mt-5" action="">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search for a product"
+            aria-label="Search for a product"
+            aria-describedby="button-addon2"
+          />
+          <button class="btn btn-primary" type="submit" id="button-addon2">
+            Search
+          </button>
+        </div>
+      </form>
+
+      <!-- empty list -->
+      <div class="empty-msg mt-5">
+        <p class="text-center">Search for products to show up!</p>
+      </div>
+      <!-- loader -->
+      <div
+        class="spinner-container mt-5 d-flex align-items-center justify-content-center d-none"
+      >
+        <p class="mt-3 fw-semibold mx-3">Hold Tight</p>
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <!-- product list -->
+      <div class="product-list-container mt-5 d-none">
+        <h5>Try these products</h5>
+        <ul class="mt-5 list-group list-group-flush">
+          <!-- <li class="list-group-item d-flex py-3 rounded">
+            <div>
+              <img
+                src="https://rukminim1.flixcart.com/image/312/312/k3g73bk0/cases-covers/back-cover/d/u/p/spigen-064cs24871-original-imafmkv4qrttguhe.jpeg?q=70"
+                alt=""
+                class="product-image"
+              />
+            </div>
+            <div class="px-3">
+              <h5>Spigen Rugged Armor Back Cover for Apple iPhone XR</h5>
+              <span class="positive badge text-bg-success">45</span
+              ><span class="neutral badge text-bg-success">45</span
+              ><span class="negative badge text-bg-success">45</span>
+            </div>
+          </li>
+
+          <li class="list-group-item d-flex py-3 rounded">
+            <div>
+              <img
+                src="https://rukminim1.flixcart.com/image/312/312/kvwpt3k0/cases-covers/back-cover/2/t/x/cler-bumpr-case-13-black-enflamo-original-imag8pd5x7szqmqn.jpeg?q=70"
+                alt=""
+                class="product-image"
+              />
+            </div>
+            <div class="px-3">
+              <h5>Enflamo Back Cover for Apple iPhone 13</h5>
+              <span class="positive badge text-bg-success">45</span
+              ><span class="neutral badge text-bg-success">45</span
+              ><span class="negative badge text-bg-success">45</span>
+            </div>
+          </li>
+
+          <li class="list-group-item d-flex py-3 rounded">
+            <div>
+              <img
+                src="https://rukminim1.flixcart.com/image/312/312/k83dlzk0/cases-covers/back-cover/j/u/8/spigen-064cs24872-original-imafq6nfqdv9wb7h.jpeg?q=70"
+                alt=""
+                class="product-image"
+              />
+            </div>
+            <div class="px-3">
+              <h5>Spigen Liquid Air Back Cover for Apple iPhone XR</h5>
+              <span class="positive badge text-bg-success">45</span
+              ><span class="neutral badge text-bg-success">45</span
+              ><span class="negative badge text-bg-success">45</span>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
